@@ -1,0 +1,174 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "../bourbon/bourbon";
+@import "../neat/neat";
+
+$sakayGreen: #2A6D45;
+
+html, body {
+	font-family: "Museo Sans", "museo-sans", sans-serif;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 2.5;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 300;
+}
+
+p {
+	font-size: 24px;
+	line-height: 1.2;
+	padding: 40px;
+}
+
+header {
+	background-color: $sakayGreen;
+	color: #fff;
+	text-align: center;
+	height: 400px;
+	width: 100%;
+	margin-bottom: 3em;
+	.text-header {
+		position: relative;
+		top: 150px;
+	}
+}
+
+.container {
+	@include outer-container;
+	text-align: center;
+}
+
+.text-main {
+	height: 500px;
+	#get-started {
+		background-color: $sakayGreen;
+		color: #fff;
+		padding: 25px 35px;
+		margin: 4em 0em;
+		display: inline-block;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 24px;
+		transition: all 2.0s ease-in;
+	}
+}
+
+.box {
+	border: 5px solid $sakayGreen;
+	height: 250px;
+	display: block;
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.box-container {
+	height: 700px;
+	a {
+		text-decoration: none;
+	}
+	.box {
+		@include span-columns(3);
+		@include omega(4n);
+		margin-bottom: 2em;
+		.box-title {
+			@include pad(11px);
+			display: block;
+			position: relative;
+			top: -42px;
+			width: 100%;
+			height: 40px;
+			color: #fff;
+			font-size: 24px;
+			background-color: $sakayGreen;
+		}
+	}
+}
+
+.section {
+	height: 1450px;
+	&#mrt-lrt {
+		height: 2000px;
+	}
+	&#tricycle {
+		height: 950px;
+	}
+}
+
+.row-header {
+	height: 350px;
+	@include span-columns(12);
+	.header {
+		img {
+			@include span-columns(2 of 12);
+			height: 10em;
+			float: left;
+			margin-right: 0px;
+		}
+		h1 {
+			@include span-columns(4 of 12);
+			text-align: left;
+			position: relative;
+			bottom: -23px;
+		}	
+	}
+	p { 
+		clear: both;
+	}
+}
+
+.column-container {
+	counter-reset: column;
+	.column {
+		@include span-columns(3);
+		@include shift(0.7);
+		@include omega(3n);	
+		counter-increment: column;
+		p {
+			text-align: left;
+			font-size: 21px;
+			@include pad(2em 0px);
+		}
+		img {
+			position: relative;
+			bottom: 26px;
+			z-index: -100;
+		}
+	}
+	.number:before {
+		display: block;
+		content: counter(column);
+		width: 45px;
+		height: 45px;
+		padding: 12px;
+		padding-left: 7px;
+		background-color: $sakayGreen;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.tip:before {
+		display: block;
+		content: 'Tip:';
+		background: url('../illustrations/Tip.svg') 0px 1px no-repeat;
+		width: 95px;
+		height: 45px;
+		padding: 11px;
+		padding-left: 35px;
+		background-color: $sakayGreen;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
