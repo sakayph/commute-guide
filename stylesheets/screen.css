@@ -153,42 +153,38 @@ header .text-header {
   border: 5px solid #2A6D45;
   height: 250px;
   display: block;
+  overflow: hidden;
 }
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .box img {
   height: 100%;
   width: 100%;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .box-container {
   height: 700px;
 }
-/* line 78, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .box-container a {
   text-decoration: none;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
-/* line 81, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
+.box-container a:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/* line 87, ../sass/screen.scss */
 .box-container .box {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
   margin-bottom: 2em;
 }
-/* line 89, ../neat/grid/_span-columns.scss */
-.box-container .box:last-child {
-  margin-right: 0;
-}
-/* line 78, ../neat/grid/_omega.scss */
-.box-container .box:nth-child(4n) {
-  margin-right: 0;
-}
-/* line 83, ../neat/grid/_omega.scss */
-.box-container .box:nth-child(4n+1) {
-  clear: left;
-}
-/* line 85, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .box-container .box .box-title {
   padding: 11px;
   display: block;
@@ -200,21 +196,91 @@ header .text-header {
   font-size: 24px;
   background-color: #2A6D45;
 }
+@media screen and (min-width: 0px) and (max-width: 770px) {
+  /* line 87, ../sass/screen.scss */
+  .box-container .box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 5.97086%;
+  }
+  /* line 89, ../neat/grid/_span-columns.scss */
+  .box-container .box:last-child {
+    margin-right: 0;
+  }
+  /* line 78, ../neat/grid/_omega.scss */
+  .box-container .box:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 83, ../neat/grid/_omega.scss */
+  .box-container .box:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 771px) and (max-width: 1023px) {
+  /* line 87, ../sass/screen.scss */
+  .box-container .box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 89, ../neat/grid/_span-columns.scss */
+  .box-container .box:last-child {
+    margin-right: 0;
+  }
+  /* line 78, ../neat/grid/_omega.scss */
+  .box-container .box:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, ../neat/grid/_omega.scss */
+  .box-container .box:nth-child(3n+1) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 87, ../sass/screen.scss */
+  .box-container .box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 89, ../neat/grid/_span-columns.scss */
+  .box-container .box:last-child {
+    margin-right: 0;
+  }
+  /* line 78, ../neat/grid/_omega.scss */
+  .box-container .box:nth-child(4n) {
+    margin-right: 0;
+  }
+  /* line 83, ../neat/grid/_omega.scss */
+  .box-container .box:nth-child(4n+1) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  /* line 78, ../sass/screen.scss */
+  .box-container {
+    margin: 30px;
+  }
+}
 
-/* line 99, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .section {
   height: 1450px;
 }
-/* line 101, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .section#mrt-lrt {
   height: 2000px;
 }
-/* line 104, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .section#tricycle {
   height: 950px;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .row-header {
   height: 350px;
   float: left;
@@ -226,7 +292,7 @@ header .text-header {
 .row-header:last-child {
   margin-right: 0;
 }
-/* line 113, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .row-header .header img {
   float: left;
   display: block;
@@ -240,7 +306,7 @@ header .text-header {
 .row-header .header img:last-child {
   margin-right: 0;
 }
-/* line 119, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .row-header .header h1 {
   float: left;
   display: block;
@@ -254,16 +320,16 @@ header .text-header {
 .row-header .header h1:last-child {
   margin-right: 0;
 }
-/* line 126, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .row-header p {
   clear: both;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .column-container {
   counter-reset: column;
 }
-/* line 133, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .column-container .column {
   float: left;
   display: block;
@@ -284,19 +350,30 @@ header .text-header {
 .column-container .column:nth-child(3n+1) {
   clear: left;
 }
-/* line 138, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .column-container .column p {
   text-align: left;
   font-size: 21px;
   padding: 2em 0px;
 }
-/* line 143, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .column-container .column img {
   position: relative;
-  bottom: 26px;
   z-index: -100;
 }
-/* line 149, ../sass/screen.scss */
+@media screen and (min-width: 0) and (max-width: 1024) {
+  /* line 163, ../sass/screen.scss */
+  .column-container .column img {
+    bottom: 15px;
+  }
+}
+@media screen and (min-width: 1025) {
+  /* line 163, ../sass/screen.scss */
+  .column-container .column img {
+    bottom: 26px;
+  }
+}
+/* line 174, ../sass/screen.scss */
 .column-container .number:before {
   display: block;
   content: counter(column);
@@ -309,7 +386,7 @@ header .text-header {
   font-size: 20px;
   font-weight: 700;
 }
-/* line 161, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .column-container .tip:before {
   display: block;
   content: 'Tip:';

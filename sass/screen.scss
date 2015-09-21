@@ -67,9 +67,11 @@ header {
 	border: 5px solid $sakayGreen;
 	height: 250px;
 	display: block;
+	overflow: hidden;
 	img {
 		height: 100%;
 		width: 100%;
+
 	}
 }
 
@@ -77,10 +79,12 @@ header {
 	height: 700px;
 	a {
 		text-decoration: none;
+		@include transition(all 0.1s ease-in);
+		&:hover {
+		@include transform(scale(1.1));
+		}
 	}
 	.box {
-		@include span-columns(3);
-		@include omega(4n);
 		margin-bottom: 2em;
 		.box-title {
 			@include pad(11px);
@@ -93,6 +97,22 @@ header {
 			font-size: 24px;
 			background-color: $sakayGreen;
 		}
+		@include media(min-width 0px max-width 770px) {
+			@include span-columns(5);
+			@include omega(2n);
+			@include shift(0.7);
+		}	
+		@include media(min-width 771px max-width 1023px) {
+			@include span-columns(4);
+			@include omega(3n);
+		}	
+		@include media(min-width 1024px) {
+			@include span-columns(3);
+			@include omega(4n);
+		}
+	}
+	@include media(min-width 0px max-width 1024px) {
+		margin: 30px;
 	}
 }
 
@@ -142,8 +162,13 @@ header {
 		}
 		img {
 			position: relative;
-			bottom: 26px;
 			z-index: -100;
+			@include media(min-width 0 max-width 1024) {
+				bottom: 15px;
+			}
+			@include media(min-width 1025) {
+				bottom: 26px;
+			}
 		}
 	}
 	.number:before {
