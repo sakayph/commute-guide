@@ -1,4 +1,4 @@
-/* Welcome to Compass.
+	/* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "../bourbon/bourbon";
 @import "../neat/neat";
+@import "../neat/neat-helpers";
 
 $sakayGreen: #2A6D45;
 
@@ -163,12 +164,7 @@ header {
 		img {
 			position: relative;
 			z-index: -100;
-			@include media(min-width 0 max-width 1024) {
-				bottom: 15px;
-			}
-			@include media(min-width 1025) {
-				bottom: 26px;
-			}
+			bottom: 15px;
 		}
 	}
 	.number:before {
@@ -186,7 +182,7 @@ header {
 	.tip:before {
 		display: block;
 		content: 'Tip:';
-		background: url('../illustrations/Tip.svg') 0px 1px no-repeat;
+		background: url('../illustrations/tip.svg') 0px 1px no-repeat;
 		width: 95px;
 		height: 45px;
 		padding: 11px;
