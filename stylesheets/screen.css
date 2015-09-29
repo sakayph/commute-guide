@@ -269,20 +269,12 @@ header .text-header {
 
 /* line 120, ../sass/screen.scss */
 .section {
-  height: 1450px;
-}
-/* line 122, ../sass/screen.scss */
-.section#mrt-lrt {
-  height: 2000px;
-}
-/* line 125, ../sass/screen.scss */
-.section#tricycle {
-  height: 950px;
+  height: auto;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .row-header {
-  height: 350px;
+  margin: 80px 0px;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -292,7 +284,7 @@ header .text-header {
 .row-header:last-child {
   margin-right: 0;
 }
-/* line 134, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .row-header .header img {
   float: left;
   display: block;
@@ -306,7 +298,7 @@ header .text-header {
 .row-header .header img:last-child {
   margin-right: 0;
 }
-/* line 140, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .row-header .header h1 {
   float: left;
   display: block;
@@ -320,16 +312,16 @@ header .text-header {
 .row-header .header h1:last-child {
   margin-right: 0;
 }
-/* line 147, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .row-header p {
   clear: both;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .column-container {
   counter-reset: column;
 }
-/* line 154, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .column-container .column {
   float: left;
   display: block;
@@ -350,19 +342,19 @@ header .text-header {
 .column-container .column:nth-child(3n+1) {
   clear: left;
 }
-/* line 159, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .column-container .column p {
   text-align: left;
   font-size: 21px;
   padding: 2em 0px;
 }
-/* line 164, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .column-container .column img {
   position: relative;
   z-index: -100;
   bottom: 15px;
 }
-/* line 170, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .column-container .number:before {
   display: block;
   content: counter(column);
@@ -375,7 +367,7 @@ header .text-header {
   font-size: 20px;
   font-weight: 700;
 }
-/* line 182, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .column-container .tip:before {
   display: block;
   content: 'Tip:';
@@ -388,4 +380,11 @@ header .text-header {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
+}
+
+/* line 191, ../sass/screen.scss */
+footer {
+  background-color: #2A6D45;
+  height: 100px;
+  margin-top: 100px;
 }
