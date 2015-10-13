@@ -167,7 +167,7 @@ header {
 	margin-bottom: 100px;
 	@include media(min-width 0px max-width 480px) {
 		margin-bottom: 20px;
-	}	
+	}
 }
 
 .row-header {
@@ -256,21 +256,27 @@ header {
 	}
 }
 
-a.back-to-top {
-	display: table;
-	width: 90%;
-	margin: auto;
-	background-color: $sakayGreen;
-	height: 40px;
-	h3 {
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
-		font-size: 1.3em;
+.section-footer {
+	clear: both;
+	a {
+		width: 180px;
+		color: $sakayGreen;
+		padding: 10px 20px;
+		height: 40px;
+		float: right;
+		h3 {
+			font-size: 1.3em;
+			display: inline-block;
+		}
+		i {
+			position: relative;
+			top: -3px;
+			right: 10px;
+		}
+		@include media(min-width 0px max-width 480px) {
+			float: none;
+		}	
 	}
-	@include media(min-width 0px max-width 480px) {
-		width: 83%;
-	}	
 }
 
 footer {
@@ -279,13 +285,13 @@ footer {
 	width: 100%;
 	margin-top: 100px;
 	display: table;
+	color: #fff;
 	p {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
 		font-weight: 300;
 		font-size: 1em;
-		color: #fff;
 	}
 	a {
 		font-weight: 700;
