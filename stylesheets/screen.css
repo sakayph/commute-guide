@@ -234,7 +234,7 @@ header .text-header {
   width: 100%;
   height: 40px;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5em;
   background-color: #2A6D45;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
@@ -373,39 +373,40 @@ header .text-header {
   display: table-cell;
   vertical-align: middle;
   text-align: left;
+  font-size: 1.5em;
 }
-/* line 180, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .row-header p {
   clear: both;
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .column-container {
   counter-reset: column;
 }
-/* line 187, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .column-container .column {
   padding: 30px;
   counter-increment: column;
 }
-/* line 190, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .column-container .column p {
   padding: 2em 0px;
 }
-/* line 193, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .column-container .column img {
   position: relative;
   z-index: -100;
   bottom: 24px;
 }
 @media screen and (min-width: 0px) and (max-width: 1023px) {
-  /* line 199, ../sass/screen.scss */
+  /* line 200, ../sass/screen.scss */
   .column-container .column img {
     bottom: 30px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
-  /* line 187, ../sass/screen.scss */
+  /* line 188, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -426,7 +427,7 @@ header .text-header {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 770px) {
-  /* line 187, ../sass/screen.scss */
+  /* line 188, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -447,7 +448,7 @@ header .text-header {
   }
 }
 @media screen and (min-width: 771px) and (max-width: 1023px) {
-  /* line 187, ../sass/screen.scss */
+  /* line 188, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -469,7 +470,7 @@ header .text-header {
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 187, ../sass/screen.scss */
+  /* line 188, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -490,7 +491,7 @@ header .text-header {
     clear: left;
   }
 }
-/* line 222, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .column-container .number:before {
   display: block;
   content: counter(column);
@@ -503,7 +504,7 @@ header .text-header {
   font-size: 20px;
   font-weight: 700;
 }
-/* line 234, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .column-container .tip:before {
   display: block;
   content: 'Tip:';
@@ -518,7 +519,7 @@ header .text-header {
   font-weight: 700;
 }
 
-/* line 249, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 footer {
   background-color: #2A6D45;
   height: 100px;
