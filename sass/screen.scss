@@ -25,15 +25,25 @@ h2 {
 	font-weight: 300;
 }
 
+h3 {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
 p {
 	font-size: 1.2em;
 	line-height: 1.2;
-	padding: 40px;
+	@include pad(40px);
 	@include media(max-width 480px) {
-		padding: 10px 30px;
+		@include pad(10px 30px);
 		text-align: left;
 		font-size: 1em;
 	}
+}
+
+a {
+	text-decoration: none;
+	color: #fff
 }
 
 header {
@@ -77,17 +87,15 @@ header {
 
 .text-main {
 	margin: 3em 0 3em;
-	#get-started {
-		background-color: $sakayGreen;
-		color: #fff;
-		padding: 25px 35px;
-		margin: 4em 0em;
-		display: inline-block;
-		text-decoration: none;
-		font-weight: 700;
-		font-size: 24px;
-		transition: all 2.0s ease-in;
-	}
+	// #get-started {
+	// 	background-color: $sakayGreen;
+	// 	@include pad(25px 35px);
+	// 	margin: 4em 0em;
+	// 	display: inline-block;
+	// 	font-weight: 700;
+	// 	font-size: 24px;
+	// 	transition: all 2.0s ease-in;
+	// }
 }
 
 .box {
@@ -105,7 +113,6 @@ header {
 	height: 700px;
 	margin: 30px;
 	a {
-		text-decoration: none;
 		@include transition(all 0.1s ease-in);
 		&:hover {
 			@include transform(scale(1.1));
@@ -113,15 +120,14 @@ header {
 	}
 	.box {
 		margin-bottom: 2em;
-		.box-title {
-			@include pad(11px);
+		h3 {
 			display: block;
+			@include pad(8px);
 			position: relative;
 			top: -42px;
 			width: 100%;
 			height: 40px;
 			color: #fff;
-			font-size: 1.5em;
 			background-color: $sakayGreen;	
 		}
 		@include media(min-width 0px max-width 480px) {
@@ -130,7 +136,7 @@ header {
 			height: 50px;
 			margin-bottom: 0.5em;
 			border: none;
-			.box-title {
+			h3 {
 				position: inherit;
 			}
 			img {
@@ -157,8 +163,11 @@ header {
 }
 
 .section {
-	height: auto;
 	clear: both;
+	margin-bottom: 100px;
+	@include media(min-width 0px max-width 480px) {
+		margin-bottom: 20px;
+	}	
 }
 
 .row-header {
@@ -171,11 +180,10 @@ header {
 			float: left;
 			width: 130px;
 		}
-		h1 {
+		h3 {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: left;
-			font-size: 1.5em;
 		}	
 	}
 	p { 
@@ -186,9 +194,10 @@ header {
 .column-container {
 	counter-reset: column;
 	.column {
-		padding: 30px;
+		@include pad(30px);
 		counter-increment: column;
 		p {
+			text-align: left;
 			@include pad(2em 0px);
 		}
 		img {
@@ -247,8 +256,42 @@ header {
 	}
 }
 
+a.back-to-top {
+	display: table;
+	width: 90%;
+	margin: auto;
+	background-color: $sakayGreen;
+	height: 40px;
+	h3 {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 1.3em;
+	}
+	@include media(min-width 0px max-width 480px) {
+		width: 83%;
+	}	
+}
+
 footer {
 	background-color: $sakayGreen;
 	height: 100px;
+	width: 100%;
 	margin-top: 100px;
+	display: table;
+	p {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		font-weight: 300;
+		font-size: 1em;
+		color: #fff;
+	}
+	a {
+		font-weight: 700;
+		@include transition(all 0.1s ease-in);
+		&:hover {
+			color: #FF584C;
+		}
+	}
 }
