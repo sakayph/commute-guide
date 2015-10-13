@@ -137,10 +137,15 @@ header {
 			margin-bottom: 0.5em;
 			border: none;
 			h3 {
-				position: inherit;
+				position: initial;
+				text-align: left;
 			}
 			img {
-				display: none;
+				width: 20%;
+				float: left;
+				position: relative;
+				bottom: 4px;
+				right: 2px;
 			}
 		}	
 		@include media(min-width 481px max-width 770px) {

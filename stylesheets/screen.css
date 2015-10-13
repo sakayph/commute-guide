@@ -260,11 +260,16 @@ header .text-header {
   }
   /* line 139, ../sass/screen.scss */
   .box-container .box h3 {
-    position: inherit;
+    position: initial;
+    text-align: left;
   }
-  /* line 142, ../sass/screen.scss */
+  /* line 143, ../sass/screen.scss */
   .box-container .box img {
-    display: none;
+    width: 20%;
+    float: left;
+    position: relative;
+    bottom: 4px;
+    right: 2px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 770px) {
@@ -338,19 +343,19 @@ header .text-header {
   }
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .section {
   clear: both;
   margin-bottom: 100px;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
-  /* line 165, ../sass/screen.scss */
+  /* line 170, ../sass/screen.scss */
   .section {
     margin-bottom: 20px;
   }
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .row-header {
   margin: 0.5em 0em;
   float: left;
@@ -362,55 +367,55 @@ header .text-header {
 .row-header:last-child {
   margin-right: 0;
 }
-/* line 176, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .row-header .header {
   display: table;
 }
-/* line 178, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .row-header .header img {
   display: table-cell;
   float: left;
   width: 130px;
 }
-/* line 183, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .row-header .header h3 {
   display: table-cell;
   vertical-align: middle;
   text-align: left;
 }
-/* line 189, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .row-header p {
   clear: both;
 }
 
-/* line 194, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .column-container {
   counter-reset: column;
 }
-/* line 196, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .column-container .column {
   padding: 30px;
   counter-increment: column;
 }
-/* line 199, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .column-container .column p {
   text-align: left;
   padding: 2em 0px;
 }
-/* line 203, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .column-container .column img {
   position: relative;
   z-index: -100;
   bottom: 24px;
 }
 @media screen and (min-width: 0px) and (max-width: 1023px) {
-  /* line 209, ../sass/screen.scss */
+  /* line 214, ../sass/screen.scss */
   .column-container .column img {
     bottom: 30px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
-  /* line 196, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -431,7 +436,7 @@ header .text-header {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 770px) {
-  /* line 196, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -452,7 +457,7 @@ header .text-header {
   }
 }
 @media screen and (min-width: 771px) and (max-width: 1023px) {
-  /* line 196, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -474,7 +479,7 @@ header .text-header {
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 196, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   .column-container .column {
     float: left;
     display: block;
@@ -495,7 +500,7 @@ header .text-header {
     clear: left;
   }
 }
-/* line 232, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .column-container .number:before {
   display: block;
   content: counter(column);
@@ -508,7 +513,7 @@ header .text-header {
   font-size: 20px;
   font-weight: 700;
 }
-/* line 244, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .column-container .tip:before {
   display: block;
   content: 'Tip:';
@@ -523,11 +528,11 @@ header .text-header {
   font-weight: 700;
 }
 
-/* line 259, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .section-footer {
   clear: both;
 }
-/* line 261, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .section-footer a {
   width: 180px;
   color: #2A6D45;
@@ -535,25 +540,25 @@ header .text-header {
   height: 40px;
   float: right;
 }
-/* line 267, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .section-footer a h3 {
   font-size: 1.3em;
   display: inline-block;
 }
-/* line 271, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .section-footer a i {
   position: relative;
   top: -3px;
   right: 10px;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
-  /* line 261, ../sass/screen.scss */
+  /* line 266, ../sass/screen.scss */
   .section-footer a {
     float: none;
   }
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 footer {
   background-color: #2A6D45;
   height: 100px;
@@ -562,7 +567,7 @@ footer {
   display: table;
   color: #fff;
 }
-/* line 289, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 footer p {
   display: table-cell;
   vertical-align: middle;
@@ -570,14 +575,14 @@ footer p {
   font-weight: 300;
   font-size: 1em;
 }
-/* line 296, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 footer a {
   font-weight: 700;
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 299, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 footer a:hover {
   color: #FF584C;
 }
