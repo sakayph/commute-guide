@@ -15,32 +15,58 @@ html, body {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 2em;
 	font-weight: 700;
 	line-height: 2.5;
 }
 
 h2 {
-	font-size: 32px;
+	font-size: 1.8em;
 	font-weight: 300;
 }
 
 p {
-	font-size: 24px;
+	font-size: 1.2em;
 	line-height: 1.2;
 	padding: 40px;
+	@include media(max-width 480px) {
+		padding: 10px 30px;
+		text-align: left;
+		font-size: 1em;
+	}
 }
 
 header {
 	background-color: $sakayGreen;
+	background-image: url(../illustrations/sakay-guide-header.png);
+	background-size: 100%;
+	background-position: bottom;
+	background-repeat: no-repeat;
 	color: #fff;
 	text-align: center;
 	height: 400px;
 	width: 100%;
-	margin-bottom: 3em;
+	margin-bottom: 2 em;
 	.text-header {
 		position: relative;
-		top: 150px;
+		top: 40px;
+	}
+	@include media(min-width 0px max-width 900px) {
+		height: 300px;
+		background-size: 900px;
+	}
+	@include media(min-width 901px max-width 1599px) {
+		height: 450px;
+		background-size: 1600px;
+		.text-header {
+			top: 70px;
+		}
+	}
+	@include media(min-width 1600px) {
+		height: 550px;
+		.text-header {
+			top: 100px;
+		}
 	}
 }
 
@@ -50,7 +76,7 @@ header {
 }
 
 .text-main {
-	height: 500px;
+	margin: 3em 0 3em;
 	#get-started {
 		background-color: $sakayGreen;
 		color: #fff;
@@ -71,18 +97,18 @@ header {
 	overflow: hidden;
 	img {
 		height: 100%;
-		width: 100%;
-
+		width: 100%;	
 	}
 }
 
 .box-container {
 	height: 700px;
+	margin: 30px;
 	a {
 		text-decoration: none;
 		@include transition(all 0.1s ease-in);
 		&:hover {
-		@include transform(scale(1.1));
+			@include transform(scale(1.1));
 		}
 	}
 	.box {
@@ -96,9 +122,22 @@ header {
 			height: 40px;
 			color: #fff;
 			font-size: 24px;
-			background-color: $sakayGreen;
+			background-color: $sakayGreen;	
 		}
-		@include media(min-width 0px max-width 770px) {
+		@include media(min-width 0px max-width 480px) {
+			@include span-columns(12);
+			@include omega(1n);
+			height: 50px;
+			margin-bottom: 0.5em;
+			border: none;
+			.box-title {
+				position: inherit;
+			}
+			img {
+				display: none;
+			}
+		}	
+		@include media(min-width 481px max-width 770px) {
 			@include span-columns(5);
 			@include omega(2n);
 			@include shift(0.7);
@@ -112,36 +151,30 @@ header {
 			@include omega(4n);
 		}
 	}
-	@include media(min-width 0px max-width 1024px) {
-		margin: 30px;
-	}
+	@include media(min-width 0px max-width 480px) {
+		height: 480px;
+	}	
 }
 
 .section {
-	height: 1450px;
-	&#mrt-lrt {
-		height: 2000px;
-	}
-	&#tricycle {
-		height: 950px;
-	}
+	height: auto;
+	clear: both;
 }
 
 .row-header {
-	height: 350px;
+	margin: 0.5em 0em;
 	@include span-columns(12);
 	.header {
+		display: table;
 		img {
-			@include span-columns(2 of 12);
-			height: 10em;
+			display: table-cell;
 			float: left;
-			margin-right: 0px;
+			width: 130px;
 		}
 		h1 {
-			@include span-columns(4 of 12);
+			display: table-cell;
+			vertical-align: middle;
 			text-align: left;
-			position: relative;
-			bottom: -23px;
 		}	
 	}
 	p { 
@@ -152,19 +185,38 @@ header {
 .column-container {
 	counter-reset: column;
 	.column {
-		@include span-columns(3);
-		@include shift(0.7);
-		@include omega(3n);	
+		padding: 30px;
 		counter-increment: column;
 		p {
-			text-align: left;
-			font-size: 21px;
 			@include pad(2em 0px);
 		}
 		img {
 			position: relative;
 			z-index: -100;
-			bottom: 15px;
+			bottom: 24px;
+		}
+		@include media(min-width 0px max-width 1023px) {
+			img {
+				bottom: 30px;
+			}
+		}
+		@include media(min-width 0px max-width 480px) {
+			@include span-columns(12);
+			@include omega(1n);
+		}	
+		@include media(min-width 481px max-width 770px) {
+			@include span-columns(6);
+			@include omega(2n);
+		}	
+		@include media(min-width 771px max-width 1023px) {
+			@include span-columns(5);
+			@include shift(0.5);
+			@include omega(2n);
+		}	
+		@include media(min-width 1024px) {
+			@include span-columns(3.6);
+			@include shift(0.3);
+			@include omega(3n);	
 		}
 	}
 	.number:before {
@@ -192,4 +244,10 @@ header {
 		font-size: 20px;
 		font-weight: 700;
 	}
+}
+
+footer {
+	background-color: $sakayGreen;
+	height: 100px;
+	margin-top: 100px;
 }
