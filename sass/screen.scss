@@ -74,29 +74,20 @@ header {
 		border-radius: 3px;
 		overflow: hidden;
 		@include transition(all 0.3s ease-out);
-		h3 {
-			display: none;
-			position: relative;
-			font-size: 1em;
-			width: 132px;
-			top: -14px;
-		}
-		i {
-			display: block;
-			position: relative;
-			left: 0px;
+		.button-container {
+			width: 150px;
+			h3 { 
+				display: inline-block;
+				font-size: 1em; 
+			}
+			i {
+				position: relative;
+				left: -11px;
+			}
 		}
 		&:hover {
-			width: 150px;
+			width: 160px;
 			background: $sakayRed;
-			i {
-				left: -59px;
-			}
-			h3 {
-				display: block;
-				top: -14px;
-				right: -10px;
-			}
 		}
 		@include media(min-width 0px max-width 480px) {
 			right: 20px;
