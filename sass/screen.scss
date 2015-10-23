@@ -64,36 +64,36 @@ header {
 		position: relative;
 		top: 40px;
 	}
-	a.pdf-button {
-		padding: 13px 10px 10px;
-		width: 35px;
-		height: 40px;
-		position: absolute;
-		top: -3px;
-		right: 50px;
-		background: $sakayRedDark;
-		border-radius: 3px;
-		overflow: hidden;
-		@include transition(all 0.3s ease-out);
-		.button-container {
-			width: 150px;
-			h3 { 
-				display: inline-block;
-				font-size: 1em; 
-			}
-			i {
-				position: relative;
-				left: -11px;
-			}
-		}
-		&:hover {
-			width: 160px;
-			background: $sakayRed;
-		}
-		@include media(min-width 0px max-width 480px) {
-			right: 20px;
-		}
-	}
+	// a.pdf-button {
+	// 	padding: 13px 10px 10px;
+	// 	width: 35px;
+	// 	height: 40px;
+	// 	position: absolute;
+	// 	top: -3px;
+	// 	right: 50px;
+	// 	background: $sakayRedDark;
+	// 	border-radius: 3px;
+	// 	overflow: hidden;
+	// 	@include transition(all 0.3s ease-out);
+	// 	.button-container {
+	// 		width: 150px;
+	// 		h3 { 
+	// 			display: inline-block;
+	// 			font-size: 1em; 
+	// 		}
+	// 		i {
+	// 			position: relative;
+	// 			left: -11px;
+	// 		}
+	// 	}
+	// 	&:hover {
+	// 		width: 160px;
+	// 		background: $sakayRed;
+	// 	}
+	// 	@include media(min-width 0px max-width 480px) {
+	// 		right: 20px;
+	// 	}
+	// }
 	@include media(min-width 0px max-width 900px) {
 		height: 300px;
 		background-size: 900px;
@@ -120,15 +120,21 @@ header {
 
 .text-main {
 	margin: 3em 0 3em;
-	// #get-started {
-	// 	background-color: $sakayGreen;
-	// 	@include pad(25px 35px);
-	// 	margin: 4em 0em;
-	// 	display: inline-block;
-	// 	font-weight: 700;
-	// 	font-size: 24px;
-	// 	transition: all 2.0s ease-in;
-	// }
+	#download-pdf {
+		background-color: $sakayRedDark;
+		@include pad(15px 25px);
+		margin: 0em 0em 4em;
+		display: inline-block;
+		font-weight: 700;
+		font-size: 1.2em;
+		transition: all 2.0s ease-in;
+		i {
+			padding-right: 10px;
+		}
+	}
+	p {
+		@include pad(40px 40px 15px);
+	}
 }
 
 .box {
