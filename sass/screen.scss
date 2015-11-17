@@ -358,9 +358,15 @@ footer {
 	p {
 		display: table-cell;
 		vertical-align: middle;
+		float: left;
 		text-align: center;
 		font-weight: 300;
+		font-size: 1.4em;
+	}
+	p:last-of-type{
+		text-align: right;
 		font-size: 1em;
+		float: right;
 	}
 	a {
 		font-weight: 700;

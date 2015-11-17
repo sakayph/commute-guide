@@ -618,18 +618,25 @@ footer {
 footer p {
   display: table-cell;
   vertical-align: middle;
+  float: left;
   text-align: center;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.4em;
 }
-/* line 365, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
+footer p:last-of-type {
+  text-align: right;
+  font-size: 1em;
+  float: right;
+}
+/* line 371, ../sass/screen.scss */
 footer a {
   font-weight: 700;
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 368, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 footer a:hover {
   color: #FF584C;
 }
