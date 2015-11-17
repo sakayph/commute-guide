@@ -66,7 +66,7 @@ header {
 		top: 40px;
 	}
 	.nav-bar {
-		height: 45px;
+		height: 40px;
 		background: $sakayDarkGreen;
 		position: absolute;
 		top: 0px;
@@ -86,6 +86,13 @@ header {
 			span {
 				display: table-cell;
 				vertical-align: middle;
+			}
+		}
+		.social-media {
+			float: right;
+			margin: 10px;
+			a {
+				padding: 0px 5px;
 			}
 		}
 	}
