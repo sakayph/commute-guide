@@ -34,7 +34,7 @@ h3 {
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 1em;
 	line-height: 1.2;
 	@include pad(40px);
 	@include media(max-width 480px) {
@@ -109,9 +109,9 @@ header {
 	// 	@include transition(all 0.3s ease-out);
 	// 	.button-container {
 	// 		width: 150px;
-	// 		h3 { 
+	// 		h3 {
 	// 			display: inline-block;
-	// 			font-size: 1em; 
+	// 			font-size: 1em;
 	// 		}
 	// 		i {
 	// 			position: relative;
@@ -171,12 +171,14 @@ header {
 
 .box {
 	border: 5px solid $sakayGreen;
-	height: 250px;
+	height: 15em;
+	width: 15em;
+	margin: auto;
 	display: block;
 	overflow: hidden;
 	img {
 		height: 100%;
-		width: 100%;	
+		width: 100%;
 	}
 }
 
@@ -199,7 +201,7 @@ header {
 			width: 100%;
 			height: 40px;
 			color: #fff;
-			background-color: $sakayGreen;	
+			background-color: $sakayGreen;
 		}
 		@include media(min-width 0px max-width 480px) {
 			@include span-columns(12);
@@ -218,16 +220,16 @@ header {
 				bottom: 4px;
 				right: 2px;
 			}
-		}	
+		}
 		@include media(min-width 481px max-width 770px) {
 			@include span-columns(5);
 			@include omega(2n);
 			@include shift(0.7);
-		}	
+		}
 		@include media(min-width 771px max-width 1023px) {
 			@include span-columns(4);
 			@include omega(3n);
-		}	
+		}
 		@include media(min-width 1024px) {
 			@include span-columns(3);
 			@include omega(4n);
@@ -235,7 +237,7 @@ header {
 	}
 	@include media(min-width 0px max-width 480px) {
 		height: 480px;
-	}	
+	}
 }
 
 .section {
@@ -260,9 +262,9 @@ header {
 			display: table-cell;
 			vertical-align: middle;
 			text-align: left;
-		}	
+		}
 	}
-	p { 
+	p {
 		clear: both;
 	}
 }
@@ -270,16 +272,16 @@ header {
 .column-container {
 	counter-reset: column;
 	.column {
-		@include pad(30px);
+		@include pad(20px);
 		counter-increment: column;
 		p {
 			text-align: left;
-			@include pad(2em 0px);
+			margin: auto;
 		}
 		img {
 			position: relative;
 			z-index: -100;
-			bottom: 24px;
+			bottom: 40px;
 		}
 		@include media(min-width 0px max-width 1023px) {
 			img {
@@ -289,20 +291,20 @@ header {
 		@include media(min-width 0px max-width 480px) {
 			@include span-columns(12);
 			@include omega(1n);
-		}	
+		}
 		@include media(min-width 481px max-width 770px) {
 			@include span-columns(6);
 			@include omega(2n);
-		}	
+		}
 		@include media(min-width 771px max-width 1023px) {
 			@include span-columns(5);
 			@include shift(0.5);
 			@include omega(2n);
-		}	
+		}
 		@include media(min-width 1024px) {
 			@include span-columns(3.6);
 			@include shift(0.3);
-			@include omega(3n);	
+			@include omega(3n);
 		}
 	}
 	.number:before {
@@ -316,6 +318,7 @@ header {
 		color: #fff;
 		font-size: 20px;
 		font-weight: 700;
+		position: relative;
 	}
 	.tip:before {
 		display: block;
@@ -329,6 +332,7 @@ header {
 		color: #fff;
 		font-size: 20px;
 		font-weight: 700;
+		position: relative;
 	}
 }
 
@@ -351,7 +355,7 @@ header {
 		}
 		@include media(min-width 0px max-width 480px) {
 			float: none;
-		}	
+		}
 	}
 }
 
